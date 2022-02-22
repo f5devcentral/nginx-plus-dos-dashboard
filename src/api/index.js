@@ -10,6 +10,7 @@ import ApiProxy from './ApiProxy.js';
 import UpstreamsApi from './UpstreamsApi.js';
 import { API_DOS_PATH, API_PATH } from '../constants.js';
 
+/*
 import calculateServerZones from '../calculators/serverzones.js';
 import calculateLocationZones from '../calculators/locationzones.js';
 import calculateUpstreams from '../calculators/upstreams.js';
@@ -21,6 +22,7 @@ import calculateSSL from '../calculators/ssl.js';
 import calculateRequests from '../calculators/requests.js';
 import calculateZoneSync from '../calculators/zonesync.js';
 import calculateResolvers from '../calculators/resolvers.js';
+ */
 import calculateProtectedObjects from '../calculators/protectedobjects';
 
 const api = new Proxy({}, {
@@ -87,6 +89,7 @@ export const initialLoad = ({
 }) => {
 	const apis = [
 		api.nginx,
+		/*
 		api.connections.process(calculateConnections),
 		api.ssl.process(calculateSSL),
 		api.http.requests.process(calculateRequests),
@@ -99,6 +102,7 @@ export const initialLoad = ({
 		api.slabs.process(calculateSharedZones),
 		api.stream.zone_sync.process(calculateZoneSync),
 		api.resolvers.process(calculateResolvers),
+		 */
 		apiDos.protected_objects.process(calculateProtectedObjects)
 	];
 

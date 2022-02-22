@@ -1,4 +1,5 @@
 export default {
+	/*
 	server_zones: {
 		status: 'ok',
 		ready: false
@@ -31,6 +32,7 @@ export default {
 	resolvers: {
 		ready: false
 	},
+	 */
 	protected_objects: {
 		status: 'ok',
 		ready: false

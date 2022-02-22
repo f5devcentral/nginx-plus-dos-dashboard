@@ -13,7 +13,6 @@ import calculateProtectedObjects from '../../../calculators/protectedobjects.js'
 
 import ProtectedObjects from './protectedobjects.jsx';
 
-
 export class Dos extends React.Component {
 	render() {
 		const { data: {

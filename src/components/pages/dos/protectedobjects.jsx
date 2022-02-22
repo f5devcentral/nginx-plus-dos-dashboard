@@ -1,5 +1,6 @@
 /**
  * Copyright 2022-present, F5, Inc.
+ * Copyright 2017-present, Igor Meleshchenko
  * Copyright 2022-present, Eyal Pery
  * All rights reserved.
  *
@@ -86,9 +87,3 @@ export default class ProtectedObjects extends SortableTable {
 		return component;
 	}
 }
-
-/*
-export default DataBinder(ProtectedObjects, [
-	apiDos.protected_objects.process()
-]);
- */

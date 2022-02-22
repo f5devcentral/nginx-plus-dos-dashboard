@@ -86,6 +86,7 @@ export const subscribe = (apis, callback) => {
 	// TODO: Throttled callback
 
 	apis.forEach(api => {
+		/*
 		if (api.apiPrefix === API_DOS_PATH) {
 			OBSERVED.set(api.toString(), {
 				api,
@@ -97,8 +98,9 @@ export const subscribe = (apis, callback) => {
 
 			return;
 		}
+		 */
 
-		let isAvailable = availableApiEndpoints.firstLevelIncludes(api.path[0]);
+		let isAvailable = api.apiPrefix === API_DOS_PATH ? true : availableApiEndpoints.firstLevelIncludes(api.path[0]);
 
 		const instance = OBSERVED.get(api.toString());
 
