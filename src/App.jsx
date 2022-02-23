@@ -14,16 +14,18 @@ import Header from './components/header/header.jsx';
 import Footer from './components/footer/footer.jsx';
 import Loader from './components/loader/loader.jsx';
 import Index from './components/pages/index/index.jsx';
+import UpdatingControl from './components/updating-controll/updating-control.jsx';
+/*
 import ServerZones from './components/pages/serverzones/index.jsx';
 import Upstreams from './components/pages/upstreams/index.jsx';
 import StreamZones from './components/pages/streamzones.jsx';
 import StreamUpstreams from './components/pages/streamupstreams/index.jsx';
 import Caches from './components/pages/caches/index.jsx';
 import SharedZones from './components/pages/sharedzones.jsx';
-import UpdatingControl from './components/updating-controll/updating-control.jsx';
 import ZoneSync from './components/pages/zonesync.jsx';
 import Resolvers from './components/pages/resolvers.jsx';
-import Dos from './components/pages/dos/index.jsx';
+ */
+import ProtectedObjects from './components/pages/dos/index.jsx';
 
 import Disclaimer from './components/demo/disclaimer.jsx';
 import { STORE, startObserve, play, pause } from './datastore';
@@ -32,6 +34,7 @@ export const history = createHistory();
 
 export const SECTIONS = {
 	'#': Index,
+	/*
 	'#server_zones': ServerZones,
 	'#upstreams': Upstreams,
 	'#tcp_zones': StreamZones,
@@ -40,7 +43,8 @@ export const SECTIONS = {
 	'#shared_zones': SharedZones,
 	'#cluster': ZoneSync,
 	'#resolvers': Resolvers,
-	'#dos': Dos
+	 */
+	'#protected_objects': ProtectedObjects
 };
 
 export const Errors = {

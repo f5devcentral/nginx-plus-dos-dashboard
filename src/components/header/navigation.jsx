@@ -13,6 +13,7 @@ import { apiDos } from '../../api';
 import Settings from '../settings/index.jsx';
 
 import Icon from '../icon/icon.jsx';
+/*
 import calculateServerZones from '../../calculators/serverzones.js';
 import calculateLocationZones from '../../calculators/locationzones.js';
 import calculateUpstreams from '../../calculators/upstreams.js';
@@ -21,11 +22,13 @@ import calculateCaches from '../../calculators/caches.js';
 import calculateSharedZones from '../../calculators/sharedzones.js';
 import calculateZoneSync from '../../calculators/zonesync.js';
 import calculateResolvers from '../../calculators/resolvers.js';
+ */
 import calculateProtectedObjects from '../../calculators/protectedobjects.js';
 
 import styles from './style.css';
 
 export const SECTIONS = [
+	/*
 	{
 		title: 'HTTP Zones',
 		hash: '#server_zones',
@@ -66,9 +69,10 @@ export const SECTIONS = [
 		hash: '#resolvers',
 		statusKey: 'resolvers'
 	},
+	 */
 	{
 		title: 'Dos',
-		hash: '#dos',
+		hash: '#protected_objects',
 		statusKey: 'protected_objects'
 	}
 ];
@@ -177,6 +181,7 @@ export class Navigation extends React.Component {
 }
 
 export default DataBinder(Navigation, [
+	/*
 	api.http.server_zones.process(calculateServerZones),
 	api.http.location_zones.process(calculateLocationZones),
 	api.http.upstreams.process(calculateUpstreams),
@@ -186,6 +191,7 @@ export default DataBinder(Navigation, [
 	api.slabs.process(calculateSharedZones),
 	api.stream.zone_sync.process(calculateZoneSync),
 	api.resolvers.process(calculateResolvers),
+	 */
 	apiDos.protected_objects.process(calculateProtectedObjects)
 ], {
 	ignoreEmpty: true

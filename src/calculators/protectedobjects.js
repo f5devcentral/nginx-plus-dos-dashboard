@@ -9,8 +9,10 @@ import utils from './utils';
 
 export function handleProtectedObjects(STATS, protected_object) {
 	if (protected_object.attack && protected_object.health >= 1) {
+		STATS.alerts++;
 		STATS.status = 'danger';
 	} else if (protected_object.attack || protected_object.health > 0.9) {
+		STATS.warnings++;
 		STATS.status = 'warning';
 	}
 
@@ -24,10 +26,15 @@ export default (protected_objects, previous, { __STATUSES }) => {
 	}
 
 	const STATS = {
+		total: 0,
+		warnings: 0,
+		alerts: 0,
 		status: 'ok'
 	};
 
 	protected_objects = utils.createMapFromObject(protected_objects, handleProtectedObjects.bind(null, STATS));
+
+	STATS.total = protected_objects.size;
 
 	protected_objects.__STATS = STATS;
 	__STATUSES.protected_objects.ready = true;
