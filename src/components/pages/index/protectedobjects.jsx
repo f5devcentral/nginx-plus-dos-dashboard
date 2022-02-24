@@ -27,6 +27,7 @@ export class ProtectedObjects extends React.Component {
 				<AlertsCount
 					href="#protected_objects"
 					total={stats.total}
+					warnings={stats.warnings}
 					alerts={stats.alerts}
 				/>
 			</IndexBox>
