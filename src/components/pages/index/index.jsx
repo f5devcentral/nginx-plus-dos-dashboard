@@ -28,14 +28,9 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div className={ styles.row }>
-					<AboutNginx className={ styles.box } />
-				</div>
-
-				<div className={ `${ styles.row } ${ styles['row-wrap'] }` }>
-					<ProtectedObjects />
-				</div>
+			<div className={ styles.row }>
+				<AboutNginx className={ styles.box } />
+				<ProtectedObjects />
 			</div>
 		);
 	}
