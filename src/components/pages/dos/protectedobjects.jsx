@@ -12,6 +12,10 @@ import TableSortControl from '../../table/tablesortcontrol.jsx';
 import styles from '../../table/style.css';
 
 export default class ProtectedObjects extends SortableTable {
+	get SORTING_SETTINGS_KEY() {
+		return 'resolversSortOrder';
+	}
+
 	render() {
 		const { data } = this.props;
 		let component = null;
