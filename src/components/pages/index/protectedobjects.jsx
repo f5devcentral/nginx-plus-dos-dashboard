@@ -20,7 +20,7 @@ export class ProtectedObjects extends React.Component {
 
 		return (
 			<IndexBox
-				title="Dos"
+				title="Dos Protected Objects"
 				status={store.__STATUSES.protected_objects.status}
 				href="#protected_objects"
 			>

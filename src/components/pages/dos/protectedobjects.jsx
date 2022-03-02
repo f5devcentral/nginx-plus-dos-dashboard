@@ -43,6 +43,8 @@ export default class ProtectedObjects extends SortableTable {
 							<th>Mitigation Mode</th>
 							<th>Signatures</th>
 							<th>Bad Actors</th>
+							<th>Automation Tools Detection</th>
+							<th>TLS Fingerprint</th>
 						</tr>
 						<tr className={ `${ styles['right-align'] } ${ styles['sub-header'] }` }>
 							<th className={ styles.bdr } />
@@ -50,6 +52,8 @@ export default class ProtectedObjects extends SortableTable {
 							<th className={ styles.bdr } />
 							<th>Req/s</th>
 							<th className={ styles.bdr }>Mitigations/s</th>
+							<th className={ styles.bdr } />
+							<th className={ styles.bdr } />
 							<th className={ styles.bdr } />
 							<th className={ styles.bdr } />
 							<th className={ styles.bdr } />
@@ -80,6 +84,8 @@ export default class ProtectedObjects extends SortableTable {
 									<td>{ po.mode === null ? '-' : po.mode }</td>
 									<td>{ po.sig === null ? '-' : po.sig ? 'on' : 'off' }</td>
 									<td>{ po.ba === null ? '-' : po.ba ? 'on' : 'off' }</td>
+									<td>{ po.auto_tools === null ? '-' : po.auto_tools ? 'on' : 'off' }</td>
+									<td>{ po.tls_fp === null ? '-' : po.tls_fp ? 'on' : 'off' }</td>
 								</tr>);
 							})
 						}
