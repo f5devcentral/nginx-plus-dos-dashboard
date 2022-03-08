@@ -65,7 +65,8 @@ export const checkWritePermissions = (sendCredentials = false) =>
 export const isWritable = () => apiWritePermissions;
 
 export const checkApiAvailability = () => {
-	const nginxApi = api.nginx;
+	// const nginxApi = api.nginx;
+	const nginxApi = apiDos.protected_objects;
 
 	return nginxApi.get().catch((err) => {
 		if (err.status === 401) {
@@ -88,8 +89,8 @@ export const initialLoad = ({
 	availableApiEndpoints
 }) => {
 	const apis = [
-		api.nginx,
 		/*
+		api.nginx,
 		api.connections.process(calculateConnections),
 		api.ssl.process(calculateSSL),
 		api.http.requests.process(calculateRequests),
