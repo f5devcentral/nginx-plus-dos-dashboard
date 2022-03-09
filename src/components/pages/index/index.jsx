@@ -7,8 +7,8 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React from 'react';
-import AboutNginx from './aboutnginx/aboutnginx.jsx';
 /*
+import AboutNginx from './aboutnginx/aboutnginx.jsx';
 import Connections from './connections/connections.jsx';
 import Requests from './requests/requests.jsx';
 import ServerZones from './serverzones/serverzones.jsx';
@@ -29,7 +29,6 @@ export default class Index extends React.Component {
 	render() {
 		return (
 			<div className={ styles.row }>
-				<AboutNginx className={ styles.box } />
 				<ProtectedObjects />
 			</div>
 		);
